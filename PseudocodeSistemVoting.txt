@@ -1,0 +1,47 @@
+DEKLARASI
+    menu : array of string [3] = {"Matematika", "IPS", "IPA"}
+    suara : array of integer [3] = {0, 0, 0}
+    pilihan : integer
+    total : integer ← 0
+
+ALGORITMA
+    TAMPILKAN "VOTING MATA PELAJARAN FAVORIT"
+
+    ULANGI
+        TAMPILKAN "Pilih mata pelajaran favorit:"
+        UNTUK i ← 0 SAMPAI 2
+            TAMPILKAN (i+1), ". ", menu[i]
+        SELESAI UNTUK
+
+        TAMPILKAN "4. Lihat Hasil Voting"
+        TAMPILKAN "5. Keluar"
+        INPUT pilihan
+
+        IF pilihan ≥ 1 AND pilihan ≤ 3 THEN
+            suara[pilihan - 1] ← suara[pilihan - 1] + 1
+            total ← total + 1
+            TAMPILKAN "Terima kasih sudah voting!"
+
+        ELSE IF pilihan = 4 THEN
+            IF total = 0 THEN
+                TAMPILKAN "Belum ada voting!"
+            ELSE
+                TAMPILKAN "HASIL VOTING"
+                UNTUK i ← 0 SAMPAI 2
+                    TAMPILKAN menu[i], " : ", suara[i], " suara"
+                    TAMPILKAN "Persentase: (suara[i] × 100 / total)%"
+                SELESAI UNTUK
+                TAMPILKAN "Total suara: ", total
+            END IF
+
+        ELSE IF pilihan = 5 THEN
+            KELUAR DARI PERULANGAN
+
+        ELSE
+            TAMPILKAN "Pilihan tidak valid!"
+        END IF
+
+    SAMPAI pilihan = 5
+
+    TAMPILKAN "Program selesai"
+SELESAI

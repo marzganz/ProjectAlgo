@@ -1,0 +1,36 @@
+Mulai
+
+Deklarasi:
+    nama[30]           → array string
+    mtk[30], ipa[30], ips[30], rata[30] → array float
+    jumlah             → integer
+
+Tampilkan judul program
+Input jumlah siswa
+
+Untuk i dari 0 sampai jumlah-1 lakukan:
+    Tampilkan "Siswa ke-(i+1)"
+    Input nama[i]
+    Input nilai mtk[i]
+    Input nilai ipa[i]
+    Input nilai ips[i]
+    Hitung rata[i] = (mtk[i] + ipa[i] + ips[i]) / 3
+Selesai perulangan
+
+Tampilkan header tabel nilai
+
+Untuk i dari 0 sampai jumlah-1 lakukan:
+    Jika rata[i] ≥ 85
+        grade = 'A'
+    Jika tidak dan rata[i] ≥ 70
+        grade = 'B'
+    Jika tidak dan rata[i] ≥ 60
+        grade = 'C'
+    Jika tidak
+        grade = 'D'
+    
+    Tampilkan:
+        nama[i], mtk[i], ipa[i], ips[i], rata[i], grade
+Selesai perulangan
+
+Selesai
